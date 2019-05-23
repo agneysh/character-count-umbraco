@@ -1,0 +1,31 @@
+{
+    propertyEditors: [
+        {
+		alias: "Custom.characterLimit",
+		name: "RTE Character Limit",
+		editor: {
+		view: "~/App_Plugins/characterCount/characterLimit.html"
+		},
+		prevalues: {
+			fields: [
+				{
+					label: "Number of chars",
+					description: "Enter the number of chars to limit on",
+					key: "limit",
+					view: "number",
+					validation: [
+						{
+							type: "Required" 
+						}						
+					]
+				}
+
+			]
+		}
+        }
+    ]
+    ,
+    javascript: [
+        '~/App_Plugins/characterCount/characterLimit.controller.js',
+    ]
+}
